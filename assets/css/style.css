@@ -12,7 +12,6 @@ body {
   padding: 100px;
 }
 
-/* Formulario */
 
 #preview {
   height: 200px;
@@ -23,7 +22,6 @@ body {
 }
 
 
-/* Tabla de Participantes */
 
 #Animales {
   height: 100%;
@@ -38,9 +36,7 @@ body {
   box-shadow: 0px 1px 5px 1px;
 }
 
-.participante {
-  max-width: 30%;
-}
+
 
 /* Modal */
 
