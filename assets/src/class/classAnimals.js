@@ -1,16 +1,12 @@
 //CLASES HIJAS ANIMAL
 import Animal from "./classAnimal.js";
 
-const audioPlayer = document.getElementById("player");
-
 class Leon extends Animal{
     constructor(nombre, edad, img, comentario, sonido){
         super(nombre, edad, img, comentario, sonido);
     }
 
     Rugir(){
-        audioPlayer.src = `assets/sounds/${this.getSonido()}`;
-        audioPlayer.play();
     }
 }
 
@@ -20,8 +16,6 @@ class Lobo extends Animal{
     }
 
     Aullar(){
-        audioPlayer.src = `assets/sounds/${this.getSonido()}`;
-        audioPlayer.play();
     }
 }
 
@@ -31,8 +25,6 @@ class Oso extends Animal{
     }
 
     Gruñir(){ 
-        audioPlayer.src = `assets/sounds/${this.getSonido()}`;
-        audioPlayer.play();
     }
 }
 
@@ -42,8 +34,6 @@ class Serpiente extends Animal{
     }
 
     Sisear(){  
-        audioPlayer.src = `assets/sounds/${this.getSonido()}`;
-        audioPlayer.play();
     }
 }
 
@@ -52,9 +42,7 @@ class Aguila extends Animal{
         super(nombre, edad, img, comentario, sonido);
     }
 
-    Chillar(){
-        audioPlayer.src = `assets/sounds/${this.getSonido()}`;
-        audioPlayer.play();  
+    Chillar(){  
     }
 }
 

@@ -15,30 +15,21 @@ document.getElementById("animal").addEventListener("change", async (e) => {
     preview.style.backgroundImage = `url(${imagenSrc})`
 });
 
-// ! REVISAR
 const reloadTable = () => {
-    const animalesTemplate = document.getElementById("Animales");
-    animalesTemplate.innerHTML = "";
-    animales.forEach((p, i) => {
-      animalesTemplate.innerHTML += `
-            <div class="px-3 pb-2">
+    const animalesCard = document.getElementById("Animales");
+    animalesCard.innerHTML = "";
+    animales.forEach((e) => {
+      animalesCard.innerHTML += `
+            <div class="px-3 py-3">
               <div class="bg-dark text-white">
-                <img
-                  height="200"
-                  src="${p.getImg()}"
-                  data-toggle="modal" data-target="#exampleModal"
-                  onclick="modalDetails('${i}')"
-                />
+                <img height="200" src="${e.getImg()}"/>
                 <div>
-                  <button onclick="playSound('${p.getNombre()}')" class="btn btn-secondary w-100"> <img height="30" src="assets/imgs/audio.svg" /> </button>
+                  <button class="btn btn-secondary w-100"><img height="40" src="assets/imgs/audio.svg"/></button>
                 </div>
               </div>
             </div>
       `;
     });
-    document
-      .querySelectorAll(".card-body button")
-      .forEach((b) => b.addEventListener("click", activarHabiblidad));
   };
 
 document.getElementById("btnRegistrar").addEventListener("click", async (e) => {
